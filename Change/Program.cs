@@ -24,15 +24,8 @@ namespace Change
         {
             int zbytek = vratit % pole[index];
             int vypis = (vratit - zbytek) / pole[index];
-            if (vypis >= 1)
-            {
-                Console.WriteLine(vypis + " x " + pole[index] + "Kč");
-            }
-            if (zbytek > 0)
-            {
-                Change_recurrent(zbytek, ++index, pole);
-            }
-
+            if (vypis >= 1) {Console.WriteLine(vypis + " x " + pole[index] + "Kč");}
+            if (zbytek > 0) {Change_recurrent(zbytek, ++index, pole);}
         }
 
         private static void Change(int cena, int platba, int[] pole)
